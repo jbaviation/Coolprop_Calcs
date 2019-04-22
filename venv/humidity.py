@@ -74,6 +74,7 @@ def humidity_ratio(t, t_d, p=14.696):
     return mmr
 
 
+# TEST CODE -------------------------------------------------------
 # mmr = np.linspace(1e-3,5e-2,30)
 # p = 14.696
 # dp = dew_point(mmr, p)
@@ -83,11 +84,8 @@ def humidity_ratio(t, t_d, p=14.696):
 # p = np.linspace(15,1,30)
 # rh = relative_humidity(t_f,dp,p)
 
-t_f = 70
-p = np.linspace(15,1,30)
-rh = hap.HAPropsSI('R','T',t_f,'D',dp,'P',p)
-
-dat = {'press': p, 'temp': t_f, 'dew pt': dp, 'rh': rh*100}
-
-print(pd.DataFrame(dat))
-
+#
+# dat = {'press': p, 'temp': t_f, 'dew pt': dp, 'rh': rh*100}
+#
+# print(pd.DataFrame(dat))
+# END TEST CODE ---------------------------------------------------
